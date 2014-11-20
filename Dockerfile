@@ -21,7 +21,7 @@ RUN mkdir /data
 
 RUN apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
-RUN echo 'root:siss' | chpasswd
+RUN echo 'root:docker' | chpasswd
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 # SSH login fix. Otherwise user is kicked off after login
@@ -42,6 +42,7 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 VOLUME ["/data"]
 
+COPY config /opt/fuseki/config
 
 EXPOSE 3030 22 
 
