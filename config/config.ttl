@@ -46,7 +46,7 @@
 <#emptyDataset> rdf:type ja:RDFDataset .
 
 ## ---------------------------------------------------------------
-# THE FOLLOWING CODE WAS ADDED TO EASY SPARQL ENDPOINT DEPLOYMENT
+# THE FOLLOWING CODE WAS ADDED TO EASE SPARQL ENDPOINT DEPLOYMENT
 # Please un-comment the following code and add in the required data in the places marked with question marks (????)
 # Don't forget to uncomment (remove the first #) the <#service2> tag found at the top
 ## ---------------------------------------------------------------
