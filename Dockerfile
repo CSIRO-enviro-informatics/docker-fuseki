@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM azul/zulu-openjdk:8  
 
 #ENV DEBIAN_FRONTEND noninteractive
 
@@ -11,7 +11,7 @@ ADD script/download-fuseki.sh /opt/fuseki/download-fuseki.sh
 RUN chmod +x /opt/fuseki/download-fuseki.sh 
 RUN /bin/bash /opt/fuseki/download-fuseki.sh
 ADD script/start-fuseki.sh /opt/fuseki/start-fuseki.sh
-RUN chmod +x /opt/fuseki/fuseki-server /opt/fuseki/s-* /opt/fuseki/start-fuseki.sh
+RUN chmod +x /opt/fuseki/fuseki-server /opt/fuseki/*.sh 
 RUN mkdir /data
 
 
